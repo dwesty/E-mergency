@@ -9,9 +9,17 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">  <!--Input name--->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> <!--Input name--->
-  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> <!--Input name--->
+    <!--Input name-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">  
+    <!--Input name-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> 
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,148 +29,129 @@
 
     <![endif]-->
   </head>
+
   <body>
 
     <link rel="stylesheet" href="bootstrap.vertical-tabs.css">
 
-    <div class="col-xs-3"> <!-- required for floating -->
+<div class="col-xs-1"> <!-- required for floating -->
     <!-- Nav tabs -->
     <ul class="nav nav-tabs tabs-left">
       <li class="active"><a href="#basic" data-toggle="tab">Basic</a></li>
-      <li><a href="#profile" data-toggle="tab">Profile</a></li>
-      <li><a href="#messages" data-toggle="tab">Messages</a></li>
-      <li><a href="#settings" data-toggle="tab">Settings</a></li>
+      <li><a href="#profile" data-toggle="tab">Vitals</a></li>
+      <li><a href="#messages" data-toggle="tab">Primary</a></li>
+      <li><a href="#settings" data-toggle="tab">Misc</a></li>
     </ul>
 </div>
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
 
+<div class="container">
+  <div class="page-header">
+    <h1>Basic Patient Data</h1>
+    <p class="lead">Input Basic Patient Information</p>
+  </div>
 
+  <div class="fonts" style="font-size: 20px">
 
-    <div class="container">
-
-      <div class="page-header">
-        <h1>Basic Patient Data</h1>
-        <p class="lead">Input Basic Patient Information</p>
+    <form class="form-inline" role="form">
+      <div class="form-group">
+        <label for="First name">First</label>
+        <input type="text" class="form-control" id="First Name">
       </div>
+      <div class="form-group">
+        <label for="Last name">Last</label>
+        <input type="text" class="form-control" id="Last Name">
+      </div>
+    </form>
 
-      <div class="container">
-  <h2>Patient Name</h2>
-  <form role="form">
-    <div class="form-group">
-      <input type="text" class="form-control" id="usr">
-    </div>
+  <br>
+
+    <form class="form-inline" role="form">
+      <div class="form-group">
+        <label for="Age">Age</label>
+        <input type="number" class="form-control" id="Age" style="width: 60px;">
+      </div>
+    </form>
+
+      <h3>Sex</h3>
+        <form class="form-inline" role="form">  
+          <label>
+            <input type="radio" id="q128" name="quality[21]" value="Male" /> Male
+          </label> 
+          <label >
+            <input type="radio" id="q129" name="quality[21]" value="Female" /> Female
+          </label> 
+        </form>
+<br>
+
+      <form class="form-inline" role="form">
+        <div class="form-group">
+         <label for="Address">Address</label>
+        <input type="text" class="form-control" id="Address" style="width: 400px;">
+        </div>
+  </br>
+
+  <br>
+      <div class="form-group">
+        <label for="last name">City</label>
+        <input type="text" class="form-control" id="Last Name">
+      </div>
+      <div class="form-group">
+        <label for="State">State</label>
+        <input type="text" class="form-control" id="State" style="width: 50px;">
+       </div>
+      <div class="form-group">
+        <label for="Zip Code">Zip Code</label>
+        <input type="text" class="form-control" id="Zip Code" style="width: 50px;">
+      </div>
+      </form>
+
+  </br>
+
+<br>
+  <form class="form-inline" role="form">
+      <div class="form-group">
+        <label for="Weight">Weight</label>
+        <input type="number" class="form-control" id="Weight" style="width: 50px;">
+            <select>
+            <option value="lbs">lbs</option>
+            <option value="kg">kg</option>
+          </select>
+    </form>
+</br>
+<br>
+
+  <form class="form-inline" role="form">
+      <div class="form-group">
+        <label for="Height">Height</label>
+        <input type="number" class="form-control" id="" style="width: 50px;">
+          <select>
+            <option value="feet">feet</option>
+          </select>
+          <input type="number" class="form-control" id="inches" style="width: 50px;">
+            <select>
+             <option value="inches">inches</option>
+            </select>
   </form>
+</br>
+
+    <h2>Primary Complaints</h2>
+      <form role="form">
+        <div class="form-group">
+        <textarea name="description" rows="10" cols="50"></textarea>
+          </div>
+            </form>
+
+  </div>
 </div>
 
 
 
 
-      <h3>Three unequal columns</h3>
-      <p>Get three columns <strong>starting at desktops and scaling to large desktops</strong> of various widths. Remember, grid columns should add up to twelve for a single horizontal block. More than that, and columns start stacking no matter the viewport.</p>
-      <div class="row">
-        <div class="col-md-3">.col-md-3</div>
-        <div class="col-md-6">.col-md-6</div>
-        <div class="col-md-3">.col-md-3</div>
-      </div>
-
-      <h3>Two columns</h3>
-      <p>Get two columns <strong>starting at desktops and scaling to large desktops</strong>.</p>
-      <div class="row">
-        <div class="col-md-8">.col-md-8</div>
-        <div class="col-md-4">.col-md-4</div>
-      </div>
-
-      <h3>Full width, single column</h3>
-      <p class="text-warning">No grid classes are necessary for full-width elements.</p>
-
-      <hr>
-
-      <h3>Two columns with two nested columns</h3>
-      <p>Per the documentation, nesting is easy—just put a row of columns within an existing column. This gives you two columns <strong>starting at desktops and scaling to large desktops</strong>, with another two (equal widths) within the larger column.</p>
-      <p>At mobile device sizes, tablets and down, these columns and their nested columns will stack.</p>
-      <div class="row">
-        <div class="col-md-8">
-          .col-md-8
-          <div class="row">
-            <div class="col-md-6">.col-md-6</div>
-            <div class="col-md-6">.col-md-6</div>
-          </div>
-        </div>
-        <div class="col-md-4">.col-md-4</div>
-      </div>
-
-      <hr>
-
-      <h3>Mixed: mobile and desktop</h3>
-      <p>The Bootstrap 3 grid system has four tiers of classes: xs (phones), sm (tablets), md (desktops), and lg (larger desktops). You can use nearly any combination of these classes to create more dynamic and flexible layouts.</p>
-      <p>Each tier of classes scales up, meaning if you plan on setting the same widths for xs and sm, you only need to specify xs.</p>
-      <div class="row">
-        <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
-        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-      </div>
-      <div class="row">
-        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-        <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-      </div>
-      <div class="row">
-        <div class="col-xs-6">.col-xs-6</div>
-        <div class="col-xs-6">.col-xs-6</div>
-      </div>
-
-      <hr>
-
-      <h3>Mixed: mobile, tablet, and desktop</h3>
-      <p></p>
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-lg-8">.col-xs-12 .col-sm-6 .col-lg-8</div>
-        <div class="col-xs-6 col-lg-4">.col-xs-6 .col-lg-4</div>
-      </div>
-      <div class="row">
-        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-        <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>
-      </div>
-
-      <hr>
-
-      <h3>Column clearing</h3>
-      <p><a href="http://getbootstrap.com/css/#grid-responsive-resets">Clear floats</a> at specific breakpoints to prevent awkward wrapping with uneven content.</p>
-      <div class="row">
-        <div class="col-xs-6 col-sm-3">
-          .col-xs-6 .col-sm-3
-          <br>
-          Resize your viewport or check it out on your phone for an example.
-        </div>
-        <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
-
-        <!-- Add the extra clearfix for only the required viewport -->
-        <div class="clearfix visible-xs"></div>
-
-        <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
-        <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
-      </div>
-
-      <hr>
-
-      <h3>Offset, push, and pull resets</h3>
-      <p>Reset offsets, pushes, and pulls at specific breakpoints.</p>
-      <div class="row">
-        <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
-        <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0">.col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0</div>
-      </div>
-      <div class="row">
-        <div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
-        <div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-0">.col-sm-6 .col-md-5 .col-md-offset-2 .col-lg-6 .col-lg-offset-0</div>
-      </div>
 
 
-    </div> <!-- /container -->
+
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
