@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>E-mergency</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap.vertical-tabs.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="custom_styles.css">
+  </head>
+  <body>
+
+	  <div class="col-xs-1"> <!-- required for floating -->
+	    <ul class="nav nav-pills nav-stacked">
+	      <li><a href="#basic" data-toggle="tab">Basic</a></li>
+	      <li class="active"><a href="#vital" data-toggle="tab">Vitals</a></li>
+	      <li><a href="#primary" data-toggle="tab">Primary</a></li>
+	      <li><a href="#treatments" data-toggle="tab">Treatments</a></li>
+	      <li><a href="#misc" data-toggle="tab">Misc</a></li>
+	    </ul>
+	  </div>
+
+  <div class="container">
+	<div class="page-header">
+    	<h1>Vitals</h1>
+    	<p class="lead">Insert Vitals Data</p>
+  	</div>
+
+	    <div class="col-xs-10">
+	    	<div class="vital title" style="font-size: 36px;"><strong>Vitals</strong>
+	    	</div>
+			<select class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="button" style="height: 50px; width: 200px;">
+			  <option value="a">Alert</option>
+			  <option value="v">Verbal</option>
+			  <option value="p">Painful</option>
+			  <option value="u">Unresponsive</option>
+			</select>
+		</div>
+
+		<div class="col-xs-10">
+	    	<div class="vital title" style="font-size: 36px;"><strong>Quality</strong>
+	    	</div>
+			<select class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="button" style="height: 50px; width: 200px;">
+			  <option value="a">Shallow</option>
+			  <option value="v">Rapid</option>
+			  <option value="p">Heaving</option>
+			  <option value="u">Unresponsive</option>
+			</select>
+		</div>
+	</div>
+
+
+<!--   	<div class="row1"> 
+	   	<div class="col-xs-2">
+		   	 <div class="resp-title pull-left" style="font-size: 36px;"><strong>Respiratory</strong></div>
+		   	 RPM
+		   	 </div>
+   	 	</div>
+   	 	<div class="col-xs-8">
+   	 		<form role="form">
+	    		<div class="form-group pull-left">
+	      			<input type="text" class="form-control" id="usr">
+	    		</div>
+  			</form>
+   	 	</div>
+   	 </div>-->
+ </div> <!--- /.container -->
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+  </body>
+</html>
