@@ -14,7 +14,7 @@
   </head>
   <body>
 
-	  <div class="col-xs-1"> <!-- required for floating -->
+	  <header> <!-- required for floating -->
 	    <ul class="nav nav-pills nav-stacked">
 	      <li><a href="#basic" data-toggle="tab">Basic</a></li>
 	      <li class="active"><a href="#vital" data-toggle="tab">Vitals</a></li>
@@ -22,16 +22,16 @@
 	      <li><a href="#treatments" data-toggle="tab">Treatments</a></li>
 	      <li><a href="#misc" data-toggle="tab">Misc</a></li>
 	    </ul>
-	  </div>
+	  </header>
 
-  <div class="container">
+  <div class="container main-body">
 	<div class="page-header">
     	<h1>Vitals</h1>
     	<p class="lead">Insert Vitals Data</p>
   	</div>
 
-	    <div class="col-xs-10">
-	    	<div class="vital title" style="font-size: 36px;"><strong>Vitals</strong>
+	    <div class="col-xs-10 vital-container">
+	    	<div class="vital-title">1. Alertness
 	    	</div>
 			<select class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="button" style="height: 50px; width: 200px;">
 			  <option value="a">Alert</option>
@@ -41,8 +41,58 @@
 			</select>
 		</div>
 
-		<div class="col-xs-10">
-	    	<div class="vital title" style="font-size: 36px;"><strong>Quality</strong>
+		<div class="col-xs-10 vital-container">
+	    	<div class="vital-title">2. Breathing
+	    	</div>
+			<select class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="button" style="height: 50px; width: 200px;">
+			  <option value="a">Shallow</option>
+			  <option value="v">Rapid</option>
+			  <option value="p">Heaving</option>
+			  <option value="u">Unresponsive</option>
+			</select>
+		</div>
+		<div class="col-xs-10 vital-container">
+	    	<div class="vital-title">3. Pulse
+	    	</div>
+			<select class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="button" style="height: 50px; width: 200px;">
+			  <option value="a">Shallow</option>
+			  <option value="v">Rapid</option>
+			  <option value="p">Heaving</option>
+			  <option value="u">Unresponsive</option>
+			</select>
+		</div>
+		<div class="col-xs-10 vital-container">
+	    	<div class="vital-title">4. Blood Pressure
+	    	</div>
+			<select class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="button" style="height: 50px; width: 200px;">
+			  <option value="a">Shallow</option>
+			  <option value="v">Rapid</option>
+			  <option value="p">Heaving</option>
+			  <option value="u">Unresponsive</option>
+			</select>
+		</div>
+		<div class="col-xs-10 vital-container">
+	    	<div class="vital-title">5. Pupils
+	    	</div>
+			<select class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="button" style="height: 50px; width: 200px;">
+			  <option value="a">Shallow</option>
+			  <option value="v">Rapid</option>
+			  <option value="p">Heaving</option>
+			  <option value="u">Unresponsive</option>
+			</select>
+		</div>
+		<div class="col-xs-10 vital-container">
+	    	<div class="vital-title">6. SpO2
+	    	</div>
+			<select class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="button" style="height: 50px; width: 200px;">
+			  <option value="a">Shallow</option>
+			  <option value="v">Rapid</option>
+			  <option value="p">Heaving</option>
+			  <option value="u">Unresponsive</option>
+			</select>
+		</div>
+		<div class="col-xs-10 vital-container">
+	    	<div class="vital-title">7. Skin
 	    	</div>
 			<select class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" role="button" style="height: 50px; width: 200px;">
 			  <option value="a">Shallow</option>
