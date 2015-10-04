@@ -18,6 +18,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="custom_styles.css">
 
 
 
@@ -34,117 +35,115 @@
 
     <link rel="stylesheet" href="bootstrap.vertical-tabs.css">
 
-<div class="col-xs-1"> <!-- required for floating -->
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs tabs-left">
-      <li class="active"><a href="#basic" data-toggle="tab">Basic</a></li>
-      <li><a href="#profile" data-toggle="tab">Vitals</a></li>
-      <li><a href="#messages" data-toggle="tab">Primary</a></li>
-      <li><a href="#settings" data-toggle="tab">Misc</a></li>
-    </ul>
-</div>
+    <header> <!-- required for floating -->
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="#basic" data-toggle="tab">Basic</a></li>
+        <li class="active"><a href="#vital" data-toggle="tab">Vitals</a></li>
+        <li><a href="#primary" data-toggle="tab">Primary</a></li>
+        <li><a href="#treatments" data-toggle="tab">Treatments</a></li>
+        <li><a href="#misc" data-toggle="tab">Misc</a></li>
+      </ul>
+    </header>
 
-
-
-<div class="container">
-  <div class="page-header">
-    <h1>Basic Patient Data</h1>
-    <p class="lead">Input Basic Patient Information</p>
-  </div>
-
-  <div class="fonts" style="font-size: 20px">
-
-    <form class="form-inline" role="form">
-      <div class="form-group">
-        <label for="First name">First</label>
-        <input type="text" class="form-control" id="First Name">
+    <div class="container main-body">
+      <div class="page-header">
+        <h1>Basic Patient Data</h1>
+        <p class="lead">Input Basic Patient Information</p>
       </div>
-      <div class="form-group">
-        <label for="Last name">Last</label>
-        <input type="text" class="form-control" id="Last Name">
-      </div>
-    </form>
 
-  <br>
+      <div class="fonts" style="font-size: 20px">
 
-    <form class="form-inline" role="form">
-      <div class="form-group">
-        <label for="Age">Age</label>
-        <input type="number" class="form-control" id="Age" style="width: 60px;">
-      </div>
-    </form>
-
-      <h3>Sex</h3>
-        <form class="form-inline" role="form">  
-          <label>
-            <input type="radio" id="q128" name="quality[21]" value="Male" /> Male
-          </label> 
-          <label >
-            <input type="radio" id="q129" name="quality[21]" value="Female" /> Female
-          </label> 
+        <form class="form-inline" role="form">
+          <div class="form-group">
+            <label for="First name">First</label>
+            <input type="text" class="form-control" id="First Name">
+          </div>
+          <div class="form-group">
+            <label for="Last name">Last</label>
+            <input type="text" class="form-control" id="Last Name">
+          </div>
         </form>
-<br>
+
+      <br>
+
+        <form class="form-inline" role="form">
+          <div class="form-group">
+            <label for="Age">Age</label>
+            <input type="number" class="form-control" id="Age" style="width: 60px;">
+          </div>
+        </form>
+
+          <h3>Sex</h3>
+            <form class="form-inline" role="form">  
+              <label>
+                <input type="radio" id="q128" name="quality[21]" value="Male" /> Male
+              </label> 
+              <label >
+                <input type="radio" id="q129" name="quality[21]" value="Female" /> Female
+              </label> 
+            </form>
+    <br>
+
+          <form class="form-inline" role="form">
+            <div class="form-group">
+             <label for="Address">Address</label>
+            <input type="text" class="form-control" id="Address" style="width: 400px;">
+            </div>
+      </br>
+
+      <br>
+          <div class="form-group">
+            <label for="last name">City</label>
+            <input type="text" class="form-control" id="Last Name">
+          </div>
+          <div class="form-group">
+            <label for="State">State</label>
+            <input type="text" class="form-control" id="State" style="width: 50px;">
+           </div>
+          <div class="form-group">
+            <label for="Zip Code">Zip Code</label>
+            <input type="text" class="form-control" id="Zip Code" style="width: 50px;">
+          </div>
+          </form>
+
+      </br>
+
+    <br>
+      <form class="form-inline" role="form">
+          <div class="form-group">
+            <label for="Weight">Weight</label>
+            <input type="number" class="form-control" id="Weight" style="width: 50px;">
+                <select>
+                <option value="lbs">lbs</option>
+                <option value="kg">kg</option>
+              </select>
+        </form>
+    </br>
+    <br>
 
       <form class="form-inline" role="form">
-        <div class="form-group">
-         <label for="Address">Address</label>
-        <input type="text" class="form-control" id="Address" style="width: 400px;">
-        </div>
-  </br>
-
-  <br>
-      <div class="form-group">
-        <label for="last name">City</label>
-        <input type="text" class="form-control" id="Last Name">
-      </div>
-      <div class="form-group">
-        <label for="State">State</label>
-        <input type="text" class="form-control" id="State" style="width: 50px;">
-       </div>
-      <div class="form-group">
-        <label for="Zip Code">Zip Code</label>
-        <input type="text" class="form-control" id="Zip Code" style="width: 50px;">
-      </div>
+          <div class="form-group">
+            <label for="Height">Height</label>
+            <input type="number" class="form-control" id="" style="width: 50px;">
+              <select>
+                <option value="feet">feet</option>
+              </select>
+              <input type="number" class="form-control" id="inches" style="width: 50px;">
+                <select>
+                 <option value="inches">inches</option>
+                </select>
       </form>
+    </br>
 
-  </br>
+        <h2>Primary Complaints</h2>
+          <form role="form">
+            <div class="form-group">
+            <textarea name="description" rows="10" cols="50"></textarea>
+              </div>
+                </form>
 
-<br>
-  <form class="form-inline" role="form">
-      <div class="form-group">
-        <label for="Weight">Weight</label>
-        <input type="number" class="form-control" id="Weight" style="width: 50px;">
-            <select>
-            <option value="lbs">lbs</option>
-            <option value="kg">kg</option>
-          </select>
-    </form>
-</br>
-<br>
-
-  <form class="form-inline" role="form">
-      <div class="form-group">
-        <label for="Height">Height</label>
-        <input type="number" class="form-control" id="" style="width: 50px;">
-          <select>
-            <option value="feet">feet</option>
-          </select>
-          <input type="number" class="form-control" id="inches" style="width: 50px;">
-            <select>
-             <option value="inches">inches</option>
-            </select>
-  </form>
-</br>
-
-    <h2>Primary Complaints</h2>
-      <form role="form">
-        <div class="form-group">
-        <textarea name="description" rows="10" cols="50"></textarea>
-          </div>
-            </form>
-
-  </div>
-</div>
+      </div>
+    </div>
 
 
 

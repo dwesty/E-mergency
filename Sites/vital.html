@@ -11,16 +11,47 @@
     <link rel="stylesheet" href="bootstrap.vertical-tabs.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="custom_styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../js/emergency.js"></script>
   </head>
   <body>
 
 	  <header> <!-- required for floating -->
+		<div class="clock">
+		  <div class="col">
+		    <span class="d h h1"></span>
+		  </div>
+		  <div class="col">
+		    <span class="d h h2"></span>
+		  </div>
+		  <div class="col">
+		    <span class="c">:</span>
+		  </div>
+		  <div class="col">
+		    <span class="d m m1"></span>
+		  </div>
+		  <div class="col">
+		    <span class="d m m2"></span>
+		  </div>
+		  <div class="col">
+		    <span class="c">:</span>
+		  </div>
+		  <div class="col">
+		    <span class="d s s1"></span>
+		  </div>
+		  <div class="col">
+		    <span class="d s s2"></span>
+		  </div>
+		  <div class="col">
+		    <span class="per"></span>
+		  </div>
+		</div>
 	    <ul class="nav nav-pills nav-stacked">
-	      <li><a href="#basic" data-toggle="tab">Basic</a></li>
-	      <li class="active"><a href="#vital" data-toggle="tab">Vitals</a></li>
-	      <li><a href="#primary" data-toggle="tab">Primary</a></li>
-	      <li><a href="#treatments" data-toggle="tab">Treatments</a></li>
-	      <li><a href="#misc" data-toggle="tab">Misc</a></li>
+			<li><a href="#basic" data-toggle="tab">Basic</a></li>
+			<li class="active"><a href="#vital" data-toggle="tab">Vitals</a></li>
+			<li><a href="#primary" data-toggle="tab">Primary</a></li>
+			<li><a href="#treatments" data-toggle="tab">Treatments</a></li>
+			<li><a href="#misc" data-toggle="tab">Misc</a></li>
 	    </ul>
 	  </header>
 
