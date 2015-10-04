@@ -8,44 +8,15 @@
     <title>E-mergency</title>
 
     <!-- Bootstrap -->
+    <script src="js/emergency.js"></script>
     <link rel="stylesheet" href="bootstrap.vertical-tabs.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="custom_styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="../js/emergency.js"></script>
   </head>
   <body>
 
 	  <header> <!-- required for floating -->
-		<div class="clock">
-		  <div class="col">
-		    <span class="d h h1"></span>
-		  </div>
-		  <div class="col">
-		    <span class="d h h2"></span>
-		  </div>
-		  <div class="col">
-		    <span class="c">:</span>
-		  </div>
-		  <div class="col">
-		    <span class="d m m1"></span>
-		  </div>
-		  <div class="col">
-		    <span class="d m m2"></span>
-		  </div>
-		  <div class="col">
-		    <span class="c">:</span>
-		  </div>
-		  <div class="col">
-		    <span class="d s s1"></span>
-		  </div>
-		  <div class="col">
-		    <span class="d s s2"></span>
-		  </div>
-		  <div class="col">
-		    <span class="per"></span>
-		  </div>
-		</div>
 	    <ul class="nav nav-pills nav-stacked">
 			<li><a href="#basic" data-toggle="tab">Basic</a></li>
 			<li class="active"><a href="#vital" data-toggle="tab">Vitals</a></li>
@@ -155,6 +126,51 @@
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  	<script>
+  		console.log("HELLO");
+		var defaults = {}
+		  , one_second = 1000
+		  , one_minute = one_second * 60
+		  , one_hour = one_minute * 60
+		  , one_day = one_hour * 24
+		  , startDate = new Date()
+		  , face = document.getElementById('lazy');
+
+		// http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+		var requestAnimationFrame = (function() {
+		  return window.requestAnimationFrame       || 
+		         window.webkitRequestAnimationFrame || 
+		         window.mozRequestAnimationFrame    || 
+		         window.oRequestAnimationFrame      || 
+		         window.msRequestAnimationFrame     || 
+		         function( callback ){
+		           window.setTimeout(callback, 1000 / 60);
+		         };
+		}());
+
+		tick();
+
+		function tick() {
+
+		  var now = new Date()
+		    , elapsed = now - startDate
+		    , parts = [];
+
+		  parts[0] = '' + Math.floor( elapsed / one_hour );
+		  parts[1] = '' + Math.floor( (elapsed % one_hour) / one_minute );
+		  parts[2] = '' + Math.floor( ( (elapsed % one_hour) % one_minute ) / one_second );
+
+		  parts[0] = (parts[0].length == 1) ? '0' + parts[0] : parts[0];
+		  parts[1] = (parts[1].length == 1) ? '0' + parts[1] : parts[1];
+		  parts[2] = (parts[2].length == 1) ? '0' + parts[2] : parts[2];
+
+		  face.innerText = parts.join(':');
+		  
+		  requestAnimationFrame(tick);
+		  
+		}
+	</script>
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
